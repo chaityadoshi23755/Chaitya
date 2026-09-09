@@ -3,6 +3,9 @@
 /Chaitya_Doshi_Resume.docx
 /SampleCV_ 2027_BTI.docx
 
+# Raw source photo (the site uses the optimized copy in assets/img/ instead)
+/chaitya.png
+
 # OS / editor junk
 .DS_Store
 Thumbs.db
