@@ -55,4 +55,23 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('.hero, .pagehead').forEach(function (zone) {
+      var glow = zone.querySelector('.hero__glow');
+      if (!glow) return;
+      zone.addEventListener('mousemove', function (e) {
+        var rect = zone.getBoundingClientRect();
+        var mx = ((e.clientX - rect.left) / rect.width) * 100;
+        var my = ((e.clientY - rect.top) / rect.height) * 100;
+        zone.style.setProperty('--mx', mx + '%');
+        zone.style.setProperty('--my', my + '%');
+        glow.classList.add('is-active');
+      });
+      zone.addEventListener('mouseleave', function () {
+        glow.classList.remove('is-active');
+      });
+    });
+  }
 })();
