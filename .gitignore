@@ -1,0 +1,8 @@
+# Source reference documents (not part of the published site — the résumé
+# download link uses the copy in assets/resume/ instead)
+/Chaitya_Doshi_Resume.docx
+/SampleCV_ 2027_BTI.docx
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
